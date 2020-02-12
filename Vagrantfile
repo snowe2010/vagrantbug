@@ -12,6 +12,5 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--accelerate2dvideo", "on"]
   end
 
-  config.vm.provision "InstallChocoAndAHK", type: :shell, path: "install_choco_and_ahk.ps1", privileged: false
-  config.vm.provision "RunAHK", type: "shell", path: "run_autohotkey.ps1", privileged: false
+  config.vm.provision "RunCalcExe", type: "shell", path: "run.ps1", privileged: false
 end
